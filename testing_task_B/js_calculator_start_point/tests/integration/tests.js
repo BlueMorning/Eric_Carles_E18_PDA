@@ -80,7 +80,7 @@ describe('calculator functionality', function() {
     element(by.css('#number2')).click();
     element(by.css('#operator_add')).click();
     element(by.css('#number1')).click();
-    calculator.clearClick()
+    element(by.css('#clear')).click();
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('23')
   })
@@ -97,6 +97,7 @@ describe('calculator functionality', function() {
     element(by.css('#number9')).click();
     element(by.css('#operator_add')).click();
     element(by.css('#number1')).click();
+    element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('1000000000')
   })
 
